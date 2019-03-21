@@ -20,7 +20,6 @@ public class Test {
         System.out.println(bigDecimal);
         System.out.println(a/4);
 
-
     }
 
 }
