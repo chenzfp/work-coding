@@ -21,10 +21,6 @@ public class Test {
         System.out.println(a/4);
 
 
-
-        int c = 7;
-        System.out.println(7<<1);
-        System.out.println(7>>1);
     }
 
 }
