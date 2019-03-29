@@ -1,7 +1,8 @@
 package common;
 
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * @Author chenzf
@@ -11,15 +12,20 @@ import java.text.DecimalFormat;
 public class Test {
 
     public static void main(String[] args) {
-        int a = 10;
-        double b = a >> 2;
-        System.out.println(b);
-        DecimalFormat df = new DecimalFormat("#.00");
-        System.out.println(df.format(b));
-        BigDecimal bigDecimal = new BigDecimal(b);
-        System.out.println(bigDecimal);
-        System.out.println(a/4);
+        List<Integer> list = Arrays.asList(1, 2, 3);
 
+        /*Integer integer = list.stream().map(i -> i * 3).reduce((sum) -> sum + 0).get();
+        System.out.println(integer);*/
+
+    }
+
+    public static void filter(List<String> list, Predicate<String> condition) {
+
+        list.forEach(i -> {
+            if (condition.test(i)) {
+                System.out.print(i + " ");
+            }
+        });
     }
 
 }
